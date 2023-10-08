@@ -1,3 +1,4 @@
+import MainScene from "@/components/canvas/MainScene";
 import dynamic from "next/dynamic";
 const Box = dynamic(() => import("@/components/canvas/Box"), {
   ssr: false,
@@ -14,7 +15,6 @@ const DOM = () => {
         justifyContent: "center",
       }}
     >
-      <h1>Combine your DOM and 3D</h1>
     </div>
   );
 };
@@ -23,9 +23,9 @@ const DOM = () => {
 const R3F = () => {
   return (
     <>
-      <gridHelper />
-      <axesHelper />
-      <Box route="/" />
+      {/* <gridHelper /> */}
+      {/* <axesHelper /> */}
+      <MainScene />
     </>
   );
 };
